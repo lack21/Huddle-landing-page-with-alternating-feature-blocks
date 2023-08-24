@@ -1,0 +1,334 @@
+// lear
+// Huddle landing page with alternating feature blocks
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// Colors
+$pink: hsl(322, 100%, 66%);
+$veryPaleCyan: hsl(193, 100%, 96%);
+$veryDarkCyan: hsl(192, 100%, 9%);
+$grayishBlue: hsl(208, 11%, 55%);
+$lightGray: hsl(200, 10%, 85%);
+$white: hsl(0, 0, 100%);
+
+// Global Styles
+.btn {
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  background-color: $pink;
+  color: $white;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  box-shadow: 0 0 1rem $lightGray;
+  margin-top: 1.25rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Header Section
+.header {
+  min-height: 100vh;
+  background-image: url(images/bg-hero-desktop.svg);
+  background-size: cover;
+  background-color: $veryPaleCyan;
+  padding: 2.5rem 7.5%;
+
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 180px;
+    }
+
+    .nav-btn {
+      padding: 0.75rem 4rem;
+      background-color: $white;
+      border-radius: 3rem;
+      -webkit-border-radius: 3rem;
+      -moz-border-radius: 3rem;
+      -ms-border-radius: 3rem;
+      -o-border-radius: 3rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: $veryDarkCyan;
+      box-shadow: 0 0 1rem $lightGray;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    padding-top: 7.5rem;
+    gap: 5rem;
+
+    .left-side {
+      .title {
+        font-size: 2.25rem;
+        color: $veryDarkCyan;
+        padding-bottom: 1.25rem;
+      }
+
+      .text {
+        font-weight: 400;
+        font-family: "Open Sans", sans-serif;
+        color: $veryDarkCyan;
+        line-height: 1.55rem;
+      }
+    }
+
+    .right-image {
+      min-width: 425px;
+      width: 100%;
+    }
+  }
+}
+
+// Articles Section
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 7.5rem 7.5%;
+
+  .article {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    box-shadow: 0 0 1rem $lightGray;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 5rem;
+    gap: 2.5rem;
+
+    .content {
+      flex-basis: 100%;
+
+      .name {
+        color: $veryDarkCyan;
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .text {
+        color: $grayishBlue;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.55rem;
+      }
+    }
+
+    .article-image {
+      width: 100%;
+    }
+  }
+}
+
+// Footer Section
+.footer {
+  padding: 12.5rem 7.5% 2.5rem;
+  background-color: $veryDarkCyan;
+  color: $white;
+  position: relative;
+  margin-top: 10rem;
+
+  .banner {
+    position: absolute;
+    width: min(700px, 90vw);
+    text-align: center;
+    background-color: $white;
+    z-index: 2;
+    padding: 3.5rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    box-shadow: 0 0 0.5rem $lightGray;
+    top: -7.5rem;
+    left: calc(50% - min(350px, 45vw));
+
+    .heading {
+      color: $veryDarkCyan;
+    }
+  }
+
+  .logo {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+    width: 180px;
+  }
+
+  .text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .copyright {
+    text-align: right;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+    gap: 5rem;
+
+    .item {
+      flex-basis: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      align-items: flex-start;
+
+      .link-text {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+
+      .block {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        width: min(500px, 30vw);
+      }
+
+      &.last {
+        flex-direction: row;
+        margin-right: auto;
+
+        div {
+          display: grid;
+          place-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          outline: 1px solid $white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $white;
+
+            i {
+              filter: brightness(0);
+              -webkit-filter: brightness(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// For Smaller Devices
+@media screen and (max-width: 924px) {
+  .header {
+    padding: 2.5rem 5%;
+    background-image: url(images/bg-hero-mobile.svg);
+
+    .nav-bar .nav-btn {
+      padding: 0.75rem 2.75rem;
+    }
+
+    .content {
+      flex-direction: column;
+      text-align: center;
+
+      .left-side .title {
+        font-size: 1.75rem;
+      }
+
+      .right-image {
+        min-width: 200px;
+      }
+    }
+  }
+
+  .articles {
+    padding: 7.5rem 5%;
+
+    .article {
+      flex-direction: column-reverse;
+      text-align: center;
+      max-width: 600px;
+      margin: auto;
+      padding: 3.25rem 2.5rem;
+
+      &:nth-child(2) {
+        flex-direction: column;
+      }
+
+      .content {
+        .name {
+          font-size: 1.35rem;
+        }
+
+        .text {
+          font-size: 0.975rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 12.5rem 5% 2.5rem;
+
+    .banner {
+      padding: 2.5rem;
+
+      .heading {
+        font-size: 1.35rem;
+      }
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+    .block {
+      width: auto !important;
+    }
+
+    .row {
+      flex-direction: column;
+      gap: 3.75rem;
+
+      .last {
+        margin: auto;
+      }
+    }
+  }
+
+  .logo {
+    width: 150px !important;
+  }
+}
